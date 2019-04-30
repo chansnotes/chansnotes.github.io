@@ -2,8 +2,8 @@ header:
   - title: About
     url: /about.html
 
-  - title: Vue.js
-    url: /home.html
+  - title: Vue 공부
+    url: /home
   
   - title: 아카이브
     url: /archive.html
