@@ -7,13 +7,14 @@ read_time: true
 
 > 본 글은 Udemy에서 제공하는 유료 강좌인 Vue.js Complete Guide를 수강하면서 정리한 내용입니다. 저작권 문제시 바로 글을 내리도록 하겠습니다.
 ---- 
+
 __ 저는 애기 개발자 입니다.__ 이전까지 웹 프론트엔드 개발이라고는 약 4년전 석사과정 프로젝트에서 jQuery, Boostrap, 그리고 D3를 사용해서 BeagleBone Black이라는 마이크로컴퓨터에 Web App을 만들어 본 경험이 전부입니다... 따라서, 글 내용에서 잘못된 정보들은 지적해주시면 바로 수정하도록 하겠습니다! 
 
 최근 개인적으로 만들어보고 싶은 웹 앱이 있어 웹 프레임워크들에 대해 공부하기 시작했습니다. 2019년 현재 사용자 인터페이스를 구축하도록 도와주는 JavaScript 기반의 웹 프레임워크들은 대표적으로 Angular, React, 그리고 Vue 이렇게 세가지가 존재합니다.
 
 세가지 중, 요즘 가장 핫하고 진입장벽이 낮다는 Vue를 사용해보기로 최종 결정 했고, [Udemy의 유료 강의](https://www.udemy.com/vuejs-2-the-complete-guide/)를 들으며 배운 내용들을 정리하여 공유하고자 합니다. 
 
-![](https://images.app.goo.gl/GLSnWn7xNQmKhGCL9)
+![뷰 로고](https://images.app.goo.gl/GLSnWn7xNQmKhGCL9)
 
 ---- 
 ## 필수 준비 사항
