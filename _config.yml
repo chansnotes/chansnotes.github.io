@@ -105,10 +105,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "ChansBro"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  bio              : "목표는 이루라고 있는 것이다."
+  location         :
   email            :
   links:
     - label: "Email"
