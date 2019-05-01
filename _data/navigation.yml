@@ -1,7 +1,7 @@
 # main links
 main:
    - title: "About"
-     url: https://mmistakes.github.io/minimal-mistakes/about/
+     url: /about/
    - title: "Vue 공부일지"
      url: /vue/
    - title: "지식창고"
