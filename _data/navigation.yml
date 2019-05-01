@@ -1,9 +1,12 @@
-header:
-  - title: About
-    url: /about.html
-
-  - title: Vue 공부
-    url: /home
-  
-  - title: 아카이브
-    url: /archive.html
+# main links
+main:
+  - title: "Quick-Start Guide"
+    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
