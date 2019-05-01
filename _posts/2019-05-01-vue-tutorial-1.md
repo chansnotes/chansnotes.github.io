@@ -1,7 +1,8 @@
 ---
-layout: article
 title: [Vue.js] Vue.js 뽀개기 (1) 개발환경 설정
-mathjax: true
+categories: 
+  - vue
+read_time: true
 ---
 
 # [Vue.js] Vue.js 뽀개기 (1) 개발환경 설정
