@@ -1,4 +1,5 @@
 ---
+layout: posts
 title: "스탠포드대학 스타트업 강의 3 - 반직관적이 되어라"
 categories: 
 - treasure
