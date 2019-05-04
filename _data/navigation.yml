@@ -6,5 +6,10 @@ main:
      url: /vue/
    - title: "지식창고"
      url: /treasure/
+     children:
+      - title: "스타트업 강의"
+      - url: /startup/
+      - title: "독서노트"
+      - url: /books/
   # - title: "Sitemap"
   #   url: /sitemap/
