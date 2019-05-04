@@ -1,8 +1,7 @@
 ---
 layout: posts 
 title: "[Vue.js] Vue.js 뽀개기 (1) 개발환경 설정"
-categories: 
-  - vue
+categories: [vue]
 read_time: true
 ---
 
