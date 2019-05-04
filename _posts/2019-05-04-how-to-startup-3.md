@@ -1,3 +1,10 @@
+---
+title: "스탠포드대학 스타트업 강의3 - 반직관적이 되어라"
+categories: 
+- treasure
+read_time: true
+---
+
 # 강의3 - 반직관적이 되어라
 
 > Standford 대학의 "How to start a startup" 강의를 팟캐스트에서 듣고 정리한 내용입니다. 
