@@ -1,8 +1,8 @@
 # main links
 main:
    - title: "About"
-     url: /about/
+     url: /about
    - title: "Vue 공부일지"
-     url: /vue/
+     url: /vue
    - title: "지식창고"
-     url: /treasure/
+     url: /treasure
