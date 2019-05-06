@@ -1,6 +1,6 @@
 ---
 layout: posts 
-title: "Vue.js 뽀개기 (3) DOM 인터액션"
+title: "Vue.js 뽀개기 (3) Vue로 DOM 조작하기"
 categories:
 - vue
 read_time: true
@@ -18,7 +18,8 @@ excerpt: "Vue가 DOM을 어떻게 조작하는지에 대해 정리한 글입니�
 
 * Vue.js는 HTML 코드를 구문 분석하여 템플릿을 작성
 * Vue의 내부 시스템에 저장하고, 이를 DOM으로 렌더링함
-* __Mustache (이중 중괄호)__를 사용하여 텍스트를 interpolate함
+* __Mustache__ 를 사용하여 텍스트를 interpolate함
+  * {%raw%}{{ example }}{%endraw%}와 같이  이중 중괄호에 넣어서 사용
 	* Mustache 태그는 안에 있는 데이터 객체의 속성 값으로 대체함 
 	* Mustache 태그안에 정의된 것은 일반 텍스트로 취급되기 때문에, Raw HTML을 보간하고자 할 때에는 `v-html`을 사용해야함
 * 데이터 객체의 속성이 실시간으로 변하면, DOM에서도 실시간으로 갱신됨
@@ -93,4 +94,4 @@ Vue.js에서는 DOM에서 사용자 인터액션으로 발생하는 이벤트들
 	* v-bind는 `:`으로 대체
 
 이번 글에서는 기본 템플릿 문법인 Interpolation과 DOM에서 발생하는 이벤트들을 반응적으로 조작 가능하게 해주는 v-디렉티브들에 대해 정리해보았습니다. 
-다음 글에서는 또다른 v-구문인 `v-if`와 `v-for`를 사용한 조건문과 리스트를 동적으로 DOM에 생성하는 방법을 정리하도록 하겠습니다. 
+다음 글에서는 또다른 v-구문인 `v-if`와 `v-for`를 사용한 조건문과 반복문을 통해 리스트를 동적으로 DOM에 생성하는 방법을 정리하도록 하겠습니다. 

@@ -19,8 +19,13 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/vue/tutorial2",
         "teaser":null},{
-        "title": "Vue.js 뽀개기 (3) DOM 인터액션",
+        "title": "Vue.js 뽀개기 (3) Vue로 DOM 조작하기",
         "excerpt":"본 글은 Udemy에서 제공하는 유료 강좌인 Vue.js Complete Guide를 수강하면서 정리한 내용입니다. 저작권 문제시 바로 글을 내리도록 하겠습니다. 이번 글에서는 Vue.js가 어떻게 렌더링된 DOM을 조작하는지에 대해 정리하고자한다. 먼저, Vue에서 가장 중요한 템플릿 문법인 Interpolation에 대해서 알아보자. Interpolation (보간법) Vue.js는 HTML 코드를 구문 분석하여 템플릿을 작성 Vue의 내부 시스템에 저장하고, 이를...","categories": ["vue"],
         "tags": [],
         "url": "http://localhost:4000/vue/tutorial3",
+        "teaser":null},{
+        "title": "Vue.js 뽀개기 (4) 조건문과 반복문",
+        "excerpt":"본 글은 Udemy에서 제공하는 유료 강좌인 Vue.js Complete Guide를 수강하면서 정리한 내용입니다. 저작권 문제시 바로 글을 내리도록 하겠습니다. 이전 글에서는 Vue가 어떻게 DOM을 조작하는지에 대해 정리를 하였습니다. Vue는 디렉티브를 사용해서 DOM의 이벤트를 듣고 주어진 역할을 수행합니다. 그렇다면 Vue에서 특정 조건에만 DOM에 렌더링 하고 싶으면 어떻게 할까요? 또한, 리스트 나열과 같이...","categories": ["vue"],
+        "tags": [],
+        "url": "http://localhost:4000/vue/tutorial4",
         "teaser":null}]
