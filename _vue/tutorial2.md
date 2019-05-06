@@ -4,6 +4,7 @@ title: "Vue.js 뽀개기 (2) Vue 인스턴스와 라이프사이클"
 categories:
 - vue
 read_time: true
+comments: true
 last_modified_at: 2019-05-05
 date: 2019-05-05
 excerpt: "Vue 인스턴스와 라이프사이클에 대해 정리한 글입니다."

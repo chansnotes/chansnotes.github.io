@@ -3,6 +3,7 @@ layout: posts
 title: "[스탠포드대학 창업강의]- 반직관적이 되어라"
 category: startup
 read_time: true
+comments: true
 last_modified_at: 2019-05-03
 date: 2019-04-30
 except: "스탠포드대학에서 진행하였던 How to start a startup의 3번째 강의를 요약정리한 글입니다."

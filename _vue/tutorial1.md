@@ -4,6 +4,7 @@ title: "Vue.js 뽀개기 (1) 개발환경 설정"
 categories:
 - vue
 read_time: true
+comments: true
 last_modified_at: 2019-04-30
 date: 2019-04-30
 excerpt: "Vue 개발환경 설정하는 법에 대해 정리한 글입니다."

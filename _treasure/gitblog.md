@@ -3,6 +3,7 @@ layout: posts
 title: "[Github Blog] Minimal-mistake 테마 활용하기" 
 category: github blog
 read_time: true
+comments: true
 last_modified_at: 2019-05-04
 date: 2019-05-04
 ---

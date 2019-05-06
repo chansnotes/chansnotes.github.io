@@ -4,6 +4,7 @@ title: "Vue.js 뽀개기 (3) Vue로 DOM 조작하기"
 categories:
 - vue
 read_time: true
+comments: true
 last_modified_at: 2019-05-06
 date: 2019-05-06
 excerpt: "Vue가 DOM을 어떻게 조작하는지에 대해 정리한 글입니다."
