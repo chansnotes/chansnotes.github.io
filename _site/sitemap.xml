@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/treasure/2019-05-04-how-to-startup-3/</loc>
+<loc>http://localhost:4000/treasure/2019-05-04-how-to-startup-3</loc>
 <lastmod>2019-05-03T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/treasure/gitblog/</loc>
+<loc>http://localhost:4000/treasure/gitblog</loc>
 <lastmod>2019-05-04T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/vue/tutorial1/</loc>
+<loc>http://localhost:4000/vue/tutorial1</loc>
 <lastmod>2019-04-30T00:00:00+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/vue/tutorial2/</loc>
+<loc>http://localhost:4000/vue/tutorial2</loc>
 <lastmod>2019-05-05T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/vue/tutorial3</loc>
+<lastmod>2019-05-06T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -80,10 +84,6 @@
 </url>
 <url>
 <loc>http://localhost:4000/treasure</loc>
-</url>
-<url>
-<loc>http://localhost:4000/tutorial2/</loc>
-<lastmod>2019-05-03T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/vue</loc>
