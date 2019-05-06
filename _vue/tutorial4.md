@@ -4,6 +4,7 @@ title: "Vue.js 뽀개기 (4) 조건문과 반복문"
 categories:
 - vue
 read_time: true
+comments: true
 last_modified_at: 2019-05-07
 date: 2019-05-07
 excerpt: "Vue에서는 조건문과 반복문을 어떻게 사용하는지에 대해 정리한 글입니다."
@@ -13,8 +14,10 @@ excerpt: "Vue에서는 조건문과 반복문을 어떻게 사용하는지에 �
 ---- 
 
 이전 글에서는 Vue가 어떻게 DOM을 조작하는지에 대해 정리를 하였습니다. Vue는 디렉티브를 사용해서 DOM의 이벤트를 듣고 주어진 역할을 수행합니다.
+
 그렇다면 Vue에서 특정 조건에만 DOM에 렌더링 하고 싶으면 어떻게 할까요? 
 또한, 리스트 나열과 같이 하나의 Loop에서 반복되는 작업은 어떻게 만들까요?
+
 Vue에서는 다른 프로그램 언어들과 마찬가지로 if 와 for 를 제공합니다. 
 먼저, 조건문을 사용하고 싶을때에 쓰는 `v-if`에 대해 정리하도록 하겠습니다. 
 
@@ -28,7 +31,7 @@ Vue에서는 다른 프로그램 언어들과 마찬가지로 if 와 for 를 제
 	* 이 경우, 지정한 태그의 display 속성이 `none`으로 표시됨 
 	* DOM에 렌더링은 된다는 뜻
 
-```HTML
+```html
 <!-- v-if는 show가 true일때 DOM에 렌더링됨 v-show는 항상 렌더링 되어있지만, show가 false면 display 속성이 none으로 변경됨 -->
 <div id="app">
   <p v-if="show"> You can see me </p>
@@ -50,7 +53,7 @@ Vue에서는 다른 프로그램 언어들과 마찬가지로 if 와 for 를 제
 
 * 예시 1: 딕셔너리 
 
-```HTMl
+```html
 	<ul>      
 		<li v-for="person in persons">
 	        <div v-for="(v, key, i) in person">
@@ -63,7 +66,7 @@ Vue에서는 다른 프로그램 언어들과 마찬가지로 if 와 for 를 제
 * 예시 2: 새로운 데이터 추가
 	* `.push()` 수식어 사용
 
-```HTML
+```html
   <!--Vue.js가 알아서 push된 object를 proxy해줌;
       1. push를 통해 array에 object 추가
       2. Vue.js가 바뀐 array object를 출력 -->
@@ -73,7 +76,7 @@ Vue에서는 다른 프로그램 언어들과 마찬가지로 if 와 for 를 제
 
 * 예시 3: 값이 바뀌는 것을 방지 
 
-```HTMl
+```html
  <!-- 존재하는 element 덮어쓰기  (Vue에게 update되는 element 알리기)
       v-bind를 사용하여 Position 및 값 그자체를 저장하고,
       이를 통해 element를 덮어 쓸때, Vue가 지정한 특정 값이 바뀌는 것을 보증
