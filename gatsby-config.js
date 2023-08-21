@@ -12,12 +12,20 @@ module.exports = {
     title: `ChansNotes`,
     author: {
       name: `Seokchan Yoo`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      summary: `심심해서 개발을 해보았다...`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`
+    description: `재미있땅.`
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-typescript',
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
     `gatsby-plugin-image`,
+    `gatsby-plugin-emotion`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -101,20 +109,6 @@ module.exports = {
             title: "Gatsby Starter Blog RSS Feed",
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
   ],
