@@ -26,10 +26,11 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/content`,
         name: `blog`,
       },
     },
@@ -45,9 +46,34 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-smartypants',
             options: {
-              maxWidth: 630,
+              dashes: 'oldschool',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 768,
+              quality: 100,
+              withWebp: true,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {},
+          },
+          {
+            resolve: 'gatsby-remark-external-links',
+            options: {
+              target: '_blank',
+              rel: 'nofollow',
             },
           },
           {
@@ -56,7 +82,6 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          `gatsby-remark-prismjs`,
         ],
       },
     },
