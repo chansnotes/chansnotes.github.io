@@ -1,6 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
-import PostItem from './PostItem'
+import PostItem from '../Main/PostItem'
+import { PostListItemType } from '../../types/PostItem.types'
+
+type PostListProps = {
+    posts: PostListItemType[]
+}
 
 const PostListWrapper = styled.div`
   display: grid;
@@ -16,25 +21,23 @@ const PostListWrapper = styled.div`
     padding: 50px 20px;
   }
 `
-const POST_ITEM_DATA = {
-    title: 'Post Item Title',
-    date: '2020.01.29.',
-    categories: ['Web', 'Frontend', 'Testing'],
-    summary:
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat doloremque fugit quis rem temporibus! Maxime molestias, suntrem debitis odit harum impedit. Modi cupiditate harum dignissimos eos in corrupti!',
-    thumbnail:
-        '<https://ji5485.github.io/static/e4f34c558ae8e8235ff53b0311085796/4d854/javascript-core-concept-summary-function-1.webp>',
-    link: '<https://www.google.co.kr/>',
-}
 
-const PostList: FunctionComponent = function () {
-    return (
-        <PostListWrapper>
-            <PostItem {...POST_ITEM_DATA} />
-            <PostItem {...POST_ITEM_DATA} />
-            <PostItem {...POST_ITEM_DATA} />
-            <PostItem {...POST_ITEM_DATA} />
-        </PostListWrapper>
+const PostList: FunctionComponent<PostListProps> = function ({
+    posts,
+}) {
+    return (<PostListWrapper>
+        {posts.map(
+            ({
+                node: { id, frontmatter },
+            }: PostListItemType) => (
+                <PostItem
+                    {...frontmatter}
+                    link="https://www.google.co.kr/"
+                    key={id}
+                />
+            ),
+        )}
+    </PostListWrapper>
     )
 }
 

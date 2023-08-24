@@ -1,22 +1,11 @@
 import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
+import { PostFrontmatterType } from '../../types/PostItem.types'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
+type PostItemProps = PostFrontmatterType & { link: string }
 
-type PostItemProps = {
-    title: string
-    date: string
-    categories: string[]
-    summary: string
-    thumbnail: string
-    link: string
-}
-const PostItemContent = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 15px;
-`
 
 const PostItemWrapper = styled(Link)`
   display: flex;
@@ -31,13 +20,18 @@ const PostItemWrapper = styled(Link)`
   }
 `
 
-const ThumbnailImage = styled.img`
+const ThumbnailImage = styled(GatsbyImage)`
   width: 100%;
   height: 200px;
   border-radius: 10px 10px 0 0;
-  object-fit: cover;
 `
 
+const PostItemContent = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+`
 const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
@@ -88,28 +82,33 @@ const Summary = styled.div`
 `
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
-    title,
-    date,
-    categories,
-    summary,
-    thumbnail,
-    link,
+  title,
+  date,
+  category,
+  excerpt,
+  topic,
+  thumbnail: {
+    childImageSharp: { gatsbyImageData },
+  },
+  link,
 }) {
-    return <PostItemWrapper>
-        <ThumbnailImage src={thumbnail} alt="Post Item Image"></ThumbnailImage>
-        <PostItemContent>
-            <Title>{title}</Title>
-            <Date>{date}</Date>
-            <Category>
-                {categories.map(category => (
-                    <CategoryItem key={category}>{category}</CategoryItem>
-                ))}
-            </Category>
-            <Summary>{summary}</Summary>
-        </PostItemContent>
-    </PostItemWrapper>
-}
+  return (
+    <PostItemWrapper to={link}>
+      <ThumbnailImage image={gatsbyImageData} alt="Post Item Image" />
 
+      <PostItemContent>
+        <Title>{title}</Title>
+        <Date>{date}</Date>
+        {/* <Category>
+                    {categories.map(item => (
+                        <CategoryItem key={item}>{item}</CategoryItem>
+                    ))}
+                </Category> */}
+        <Summary>{excerpt}</Summary>
+      </PostItemContent>
+    </PostItemWrapper>
+  )
+}
 
 
 export default PostItem

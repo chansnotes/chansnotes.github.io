@@ -1,4 +1,4 @@
-import React, { FunctionComponent, ReactNode } from 'react'
+import React, { FunctionComponent } from 'react'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 
@@ -19,6 +19,7 @@ type GatsbyLinkProps = {
     to: string;
 } & CategoryItemProps
 
+
 const CategoryListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -31,6 +32,9 @@ const CategoryListWrapper = styled.div`
     padding: 0 20px;
   }
 `
+
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
     <Link {...props} />
 )) <CategoryItemProps>`
@@ -43,12 +47,11 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
     &:last-of-type {
       margin-right: 0;
     }
-
+  
     @media (max-width: 768px) {
-        font-size: 15px;
-      }
+      font-size: 15px;
+    }
   `
-
 
 const CategoryList: FunctionComponent<CategoryListProps> = function ({
     selectedCategory,
@@ -60,7 +63,8 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
                 <CategoryItem
                     to={`/?category=${name}`}
                     active={name === selectedCategory}
-                    key={name}>
+                    key={name}
+                >
                     #{name}({count})
                 </CategoryItem>
             ))}
