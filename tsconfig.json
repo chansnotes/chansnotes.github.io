@@ -18,6 +18,9 @@
             ],
             "hooks/*": [
                 "./hooks/*"
+            ],
+            "templates/*": [
+                "./templates/*"
             ]
         },
         "esModuleInterop": true,

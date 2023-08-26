@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `찬스노트의 자수성가 일기`,
+    description: `자수성가한 부자가 되기 위해 기록을 남기고 공유하는 공간입니다.`,
+    author: `ChansNotes`,
+    siteUrl: `https://chansnotes.github.io/`,
   },
   plugins: [
     {
@@ -86,6 +86,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://chansnotes.github.io/',
+        stripQueryString: true,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-typescript',
       options: {
         isTSX: true,
@@ -93,5 +100,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
 }
