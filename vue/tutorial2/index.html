@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.11.0"/><style data-href="/styles.9e907bc32054b7771552.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="https://chansnotes.github.io/vue/tutorial2/" data-baseprotocol="https:" data-basehost="chansnotes.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1e0szv80"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1024px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg%20height=&#x27;768&#x27;%20width=&#x27;1024&#x27;%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHA//EABYBAQEBAAAAAAAAAAAAAAAAAAEFCP/aAAwDAQACEAMQAAABQVqO8vPstKWJ/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAIEFBID/9oACAEBAAEFAkmXryiqRcxkHn7Mh//EACIRAAEBBgcAAAAAAAAAAAAAAAERAAIDFiIxEiEyUVJxkf/aAAgBAwEBPwGYIiGu+HdaStJsFs8uoZNMETmfem//xAAgEQABAwIHAAAAAAAAAAAAAAABABEhFjIzQVFSYWOh/9oACAECAQE/AaqL4rCHDnKQ2k3bhCqvs9PC/8QAJRAAAAQEBQUAAAAAAAAAAAAAAQIDEgAEETEQEyIyoRQhQWGC/9oACAEBAAY/Ai5gCyoPbub5p7Dm0LdaVMD54py2TtVl07zg1EWlmHFBFK5GKOE3aLYBoIWgU01t9GNxS8Wj/8QAHBABAQACAwEBAAAAAAAAAAAAEQEAITFxkVGx/9oACAEBAAE/IenPPJs2BuSwH04VvZWxLUmtQdXTHjrPZn6sjAOgbIG2uDq9mf/aAAwDAQACAAMAAAAQIP8A/8QAHREBAQABBAMAAAAAAAAAAAAAAREhQVFhcZGhwf/aAAgBAwEBPxAm2btGIgmVhMSiM9bq+uDx3P/EAB0RAQABBAMBAAAAAAAAAAAAAAERACExYUFRkfD/2gAIAQIBAT8QUCTMymd5OaS1hHipdOPo7fNNf//EABsQAQACAwEBAAAAAAAAAAAAAAEAESEx8BDR/9oACAEBAAE/EAOmhYSwV6tXyWUUGmjDjl/NZlUnqE7/ABh7GRxBASMMVHVwR4r/AP/Z" alt=""/><picture><source type="image/webp" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" data-src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">Vue.js 뽀개기 (2) Vue 인스턴스와 라이프사이클</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>vue<!-- --> </div><div>2019.05.05.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><blockquote>
+<h4>본 글은 Udemy에서 제공하는 유료 강좌인 Vue.js Complete Guide를 수강하면서 정리한 내용입니다. 저작권 문제시 바로 글을 내리도록 하겠습니다.</h4>
+</blockquote>
+<hr>
+<p>이번 글에서는 Vue 인스턴스와 이 인스턴스가 어떠한 라이프사이클을 가지고 작동이 되는지 정리하려고 합니다. 잘못된 정보 혹은 오탈자등 글에 대한 코멘트는 언제든지 남겨주세요!</p>
+<h2>Vue 인스턴스란?</h2>
+<ul>
+<li>DOM과 HTML의 중개자</li>
+<li>Vue 인스턴스는 여러개 생성이 가능하며, 각각은 고유한 Component (이하 컴포넌트)로 구성되어 있음
+<ul>
+<li>각 컴포넌트들은 재사용 가능</li>
+</ul>
+</li>
+<li>Vue 인스턴스2 에서 1에 정의된 property를 불러올 수 있음</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> vm1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// ... 기타 코드 ... //</span>
+  <span class="token literal-property property">data</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">title</span><span class="token operator">:</span><span class="token string">'asd'</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">var</span> vm2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token comment">// 아래처럼 vm1의 instance에 정의된 property를 불러올 수 있음</span>
+  vm1<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">'Changed'</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>각 인스턴스들은 data property 객체에 있는 모든 속성을 Proxy (프록시) 처리함
+_ Vue 인스턴스에 존재하는 데이터 객체는 Vue watcher에 저장되고 감시를 받게됨
+_ 따라서, data가 변경되면 자동으로 화면이 다시 렌더링됨</li>
+</ul>
+<h3>VueJS DOM 업데이트 방식</h3>
+<ul>
+<li>Vue는 Virtual DOM을 사용하여 느린 DOM 렌더링을 수행하지 않음</li>
+<li>Virtual DOM과 Vue instance의 차이를 먼저 확인함</li>
+<li>그 후, 바뀐 New virtual DOM (=template)의 부분을 가져와서 Real DOM에 업데이트</li>
+</ul>
+<hr>
+<h2>Vue 인스턴스의 속성들</h2>
+<p>Vue 인스턴스에 추가 가능한 속성들은 2019년 5월 기준 12가지가 있다. (<a href="https://kr.vuejs.org/v2/api/#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4-%EC%86%8D%EC%84%B1" target="_blank" rel="nofollow">공식문서참조</a>)
+12가지 중 일반적으로 가장 자주 쓰게 될 3가지를 아래에 정리하였다.</p>
+<ul>
+<li>
+<p><code class="language-text">$el</code></p>
+<ul>
+<li>뷰 인스턴스가 관리하게 되는 root DOM 요소</li>
+<li>HTML로 정의된 템플릿을 연결</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">$data</code></p>
+<ul>
+<li>뷰 인스턴스가 가지는 데이터 객체</li>
+<li>뷰 인스턴스 범위 밖에서 정의하여도 data: <strong>yourData</strong> 로 명시 후, <code class="language-text">vm.__yourData__</code> 로 바로 액세스 가능</li>
+<li>데이터 객체는 프록시 처리되어, 데이터 변경시 자동으로 DOM을 업데이트함</li>
+</ul>
+</li>
+<li>
+<p><code class="language-text">$ref</code></p>
+<ul>
+<li>HTML에 있는 요소를 뷰 인스턴스내에서 액세스 가능하게 만들어줌</li>
+<li>HTML 요소에 <code class="language-text">ref="__"</code> 태그를 추가하여 사용</li>
+<li>뷰 인스턴스를 변수로 정의하고, 범위 밖에서도 JavaScript 코드로 사용 가능</li>
+</ul>
+</li>
+</ul>
+<h3>Vue 인스턴스안에 템플릿 만들기</h3>
+<ul>
+<li>뷰 인스턴스안에서 DOM에 렌더링 할 Template을 바로 정의할 수 있음</li>
+</ul>
+<div class="gatsby-highlight" data-language="javascript"><pre class="language-javascript"><code class="language-javascript"><span class="token keyword">var</span> vm3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token string">'&lt;h1> Hello! &lt;/h1>'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>단점:
+<ol>
+<li>여러줄로 작성하기 어려움 (String 포맷으로 작성해야하기 때문)</li>
+<li>구문 강조 지원도 안되서 가독성이 떨어짐</li>
+</ol>
+</li>
+</ul>
+<p>여기까지가 뷰 인스턴스에 대한 간단한 설명입니다.
+다음으로는 뷰 인스턴스가 어떠한 생애주기를 거쳐서 생성되고 없어지는지 알아보도록 하겠습니다.</p>
+<hr>
+<h2>Vue 라이프사이클</h2>
+<p><img src="https://vuejs.org/images/lifecycle.png" alt="vue-lifecycle">{: .align-center}</p>
+<p>위의 그림을 보면 어떤 방식으로 뷰의 라이프사이클이 진행되는지 한눈에 볼 수 있다.
+뷰의 라이프사이클은 간단하게 <code class="language-text">create</code>, <code class="language-text">mount</code>, <code class="language-text">update</code>, <code class="language-text">destroy</code> 크게 4가지로 나눌 수 있다.</p>
+<ol>
+<li><code class="language-text">beforeCreate()</code></li>
+</ol>
+<ul>
+<li>데이터와 이벤트가 초기화</li>
+</ul>
+<ol start="2">
+<li><code class="language-text">created()</code></li>
+</ol>
+<ul>
+<li>인스턴스 생성</li>
+<li>명시된 템플릿 혹은 <code class="language-text">$el</code>에 지정된 템플릿을 컴파일함</li>
+</ul>
+<ol start="3">
+<li><code class="language-text">beforeMount()</code></li>
+</ol>
+<ul>
+<li>el 부분을 컴파일된 템플릿으로 대체</li>
+</ul>
+<ol start="4">
+<li><code class="language-text">mounted()</code></li>
+</ol>
+<ul>
+<li><strong>DOM에 마운트</strong></li>
+<li>뷰 인스턴스가 여기서 DOM이랑 연결됨</li>
+<li>이 말은 즉, 뷰 인스턴스의 데이터 객체가 변하게되면 이를 감지하고 DOM으로 자동 업데이트 한다는 뜻
+<ul>
+<li><code class="language-text">beforeUpdate()</code>
+<ul>
+<li>데이터 변화를 감지</li>
+<li>가상의 DOM에 렌더링</li>
+</ul>
+</li>
+<li><code class="language-text">updated()</code>
+<ul>
+<li>가상 DOM에 렌더링 된 것을 실제 DOM에 마운트 시키고 업데이트</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li><code class="language-text">beforeDestroy()</code></li>
+</ol>
+<ul>
+<li>watcher, child component, event listener 등을 모두 제거</li>
+</ul>
+<ol start="6">
+<li><code class="language-text">destroyed()</code></li>
+</ol>
+<h3>Mount 관련 팁</h3>
+<ul>
+<li>뷰 인스턴스에서 어디에 mount 할지 정하지 않고, 밖에서 정의 가능</li>
+<li>어디에 mount를 해야 할지 모를때에 사용하는 것을 추천
+<ul>
+<li><code class="language-text">vm.$mount('#app');</code></li>
+</ul>
+</li>
+</ul>
+<p>이번 포스트에서는 Vue 인스턴스가 무엇인지 그리고 어떤 속성들을 가졌는지에 대한 간단한 설명을 시작으로,
+이러한 인스턴스가 어떠한 방식으로 DOM과 연계되는지에 대해 알아보았습니다.
+(<del>부실한 내용은 지적 꼭 부탁드립니다!</del>)</p>
+<p>이제 다음편에서는 Vue 코드로 실제 DOM과 인터액션을 하는 방법에 대해 알아보도록 하겠습니다.</p></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><div class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© ChansNotes Powered By Gatsby</div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/vue/tutorial2/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-7bbdb2232fb99d9fe37a.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-f34d2aeba15f7032a4bf.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-f0f8e58626fb6231ebc2.js\"],\"component---src-pages-info-tsx\":[\"/component---src-pages-info-tsx-d0ae3ad9d67ba3f96369.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-7e5e6bbc2f1a4481307f.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="8cd3e778de9a387d6eb9";</script><script src="/webpack-runtime-8c945fee3709d2d473f5.js" async></script><script src="/framework-6a525285796fb83f2864.js" async></script><script src="/app-7bbdb2232fb99d9fe37a.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

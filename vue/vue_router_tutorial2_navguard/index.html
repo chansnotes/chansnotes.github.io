@@ -1,0 +1,173 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.11.0"/><style data-href="/styles.9e907bc32054b7771552.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="https://chansnotes.github.io/vue/vue_router_tutorial2_navguard/" data-baseprotocol="https:" data-basehost="chansnotes.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1e0szv80"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1024px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg%20height=&#x27;768&#x27;%20width=&#x27;1024&#x27;%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHA//EABYBAQEBAAAAAAAAAAAAAAAAAAEFCP/aAAwDAQACEAMQAAABQVqO8vPstKWJ/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAIEFBID/9oACAEBAAEFAkmXryiqRcxkHn7Mh//EACIRAAEBBgcAAAAAAAAAAAAAAAERAAIDFiIxEiEyUVJxkf/aAAgBAwEBPwGYIiGu+HdaStJsFs8uoZNMETmfem//xAAgEQABAwIHAAAAAAAAAAAAAAABABEhFjIzQVFSYWOh/9oACAECAQE/AaqL4rCHDnKQ2k3bhCqvs9PC/8QAJRAAAAQEBQUAAAAAAAAAAAAAAQIDEgAEETEQEyIyoRQhQWGC/9oACAEBAAY/Ai5gCyoPbub5p7Dm0LdaVMD54py2TtVl07zg1EWlmHFBFK5GKOE3aLYBoIWgU01t9GNxS8Wj/8QAHBABAQACAwEBAAAAAAAAAAAAEQEAITFxkVGx/9oACAEBAAE/IenPPJs2BuSwH04VvZWxLUmtQdXTHjrPZn6sjAOgbIG2uDq9mf/aAAwDAQACAAMAAAAQIP8A/8QAHREBAQABBAMAAAAAAAAAAAAAAREhQVFhcZGhwf/aAAgBAwEBPxAm2btGIgmVhMSiM9bq+uDx3P/EAB0RAQABBAMBAAAAAAAAAAAAAAERACExYUFRkfD/2gAIAQIBAT8QUCTMymd5OaS1hHipdOPo7fNNf//EABsQAQACAwEBAAAAAAAAAAAAAAEAESEx8BDR/9oACAEBAAE/EAOmhYSwV6tXyWUUGmjDjl/NZlUnqE7/ABh7GRxBASMMVHVwR4r/AP/Z" alt=""/><picture><source type="image/webp" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" data-src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">[Vue-Router] (2) 네비게이션 가드와 기타 기능들</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>vue<!-- --> </div><div>2019.07.21.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><blockquote>
+<p>Vue Router 공식문서를 참조하여 정리하였습니다.</p>
+</blockquote>
+<hr>
+<h2>네비게이션 가드란?</h2>
+<ul>
+<li>사용자가 특정 URL에 접근하지 못하게 막는 방법</li>
+<li>로그인과 같은 사용자 인증 구현과 관련이 있음</li>
+<li>Vue router에서 네비게이션 가드는 3가지 방법으로 구현이 가능
+<ol>
+<li>전역 가드</li>
+<li>라우트 가드</li>
+<li>컴포넌트 가드</li>
+</ol>
+</li>
+</ul>
+<h2>전역 가드</h2>
+<ul>
+<li>네비게이션 발생시마다 가드가 실행됨
+<ul>
+<li>가드는 비동기적으로 실행이 가능</li>
+<li>네비게이션은 모든 훅이 해결되기전까지 <strong>보류상태</strong></li>
+</ul>
+</li>
+</ul>
+<h3>전역 가드 설정</h3>
+<ul>
+<li>router 객체를 <code class="language-text">VueRouter</code>를 통해 생성</li>
+<li><code class="language-text">router.beforeEach</code>를 사용해서 전역 가드를 등록하기</li>
+<li>이때, <strong><code class="language-text">next</code> 함수를 꼭 호출해야 네비게이션이 정상적으로 작동함</strong> (훅 해결전까지 보류상태!)
+<ul>
+<li><code class="language-text">next()</code> : 다음 훅으로 이동. 훅이 없으면 네비게이션 작동</li>
+<li><code class="language-text">next(false)</code> : 요청된 네비게이션 중단. <code class="language-text">from</code>에 정의된 라우트로 돌아감</li>
+<li><code class="language-text">next('/')</code> : 현 네비게이션을 중단하고, 지정한 라우트로 리다이렉트</li>
+<li><code class="language-text">next(error)</code> : error가 있으면, <code class="language-text">router.onError()</code>으로 등록된 콜백에 에러 전달</li>
+</ul>
+</li>
+<li><code class="language-text">router.beforeResolve</code> (2.5.0에서 추가)
+<ul>
+<li>모든 컴포넌트 가드 + 라우트 컴포넌트를 로딩한 후, 네비게이션 가드를 확인하기 전에 호출됨</li>
+</ul>
+</li>
+</ul>
+<h3>전역 가드 예시</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">routes</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span> <span class="token literal-property property">component</span><span class="token operator">:</span> Home <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token comment">// to: 이동할 라우트 객체</span>
+  <span class="token comment">// from: 이동하기전 라우트 객체</span>
+  <span class="token comment">// next: 네비게이션 전에 해결되야하는 훅 함수</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<hr>
+<h2>라우트 가드</h2>
+<ul>
+<li>특정 라우트 (URL)에 접속하게되면 가드 발생</li>
+<li><code class="language-text">beforeEnter</code>로 <code class="language-text">VueRouter</code> 인스턴스에 직접 정의</li>
+</ul>
+<h3>라우트 가드 예시</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token literal-property property">routes</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+      <span class="token literal-property property">path</span><span class="token operator">:</span> <span class="token string">'home'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">component</span><span class="token operator">:</span> Home<span class="token punctuation">,</span>
+      <span class="token function-variable function">beforeEnter</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+        <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// ...</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<hr>
+<h2>컴포넌트 가드</h2>
+<ul>
+<li>특정 컴포넌트가 호출되면 네비게이션 가드가 작동</li>
+<li><code class="language-text">beforeRouterEnter</code>, <code class="language-text">beforeRouterUpdate</code>와 <code class="language-text">beforeRouterLeave</code>를 사용하여 Vue component에 정의
+<ul>
+<li><code class="language-text">beforeRouterEnter</code>의 특징
+<ul>
+<li>네비게이션 전에 가드가 호출</li>
+<li>컴포넌트 생성이 안되어서, <code class="language-text">this</code> 객체에 접근 불가</li>
+<li><code class="language-text">next(vm=>{})</code>과 같이 <code class="language-text">vm</code>을 통해 컴포넌트 인스턴스 접근으로 <code class="language-text">this</code> 사용이 가능해짐</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>컴포넌트 가드 예시</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">const</span> Home <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">template</span><span class="token operator">:</span> <span class="token string">'&lt;p> Hello World! &lt;/p>'</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouterEnter</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 이 컴포넌트로 네비게이션 되기 전에 실행</span>
+    <span class="token comment">// Home 컴포넌트는 아직 렌더링 되지 않음</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouterUpdate</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Home 컴포넌트의 내용이 변경되면 실행</span>
+    <span class="token comment">// `this` 객체에 접근이 가능 => 왜? => 이미 렌더링이 되었기 때문</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">beforeRouterLeave</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// Home 컴포넌트를 떠나기 전에 실행</span>
+    <span class="token comment">// 사용자가 저장하지 않은 편집 내용을 두고 실수로 떠나는 것을 방지</span>
+    <span class="token comment">// next(false)를 써서 이동 취소</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<hr>
+<h2>메타 필드</h2>
+<ul>
+<li>라우트를 만들면서 검색엔진에 문서의 내용을 요약해주는 메타 필드를 포함 가능</li>
+<li><code class="language-text">meta: {...}</code> 를 <code class="language-text">VueRouter</code> 인스턴스에 적으면 끝</li>
+</ul>
+<h3>메타 필드에 접근하기</h3>
+<ul>
+<li>모든 라우트 레코드는 <code class="language-text">$route</code> 객체에 <code class="language-text">$router.matched</code>로 전달됨</li>
+<li>라우트 레코드는 중첩가능</li>
+</ul>
+<h3>전역 가드에서 메타 필드 확인</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js">router<span class="token punctuation">.</span><span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span> from<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>to<span class="token punctuation">.</span>matched<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span><span class="token parameter">record</span> <span class="token operator">=></span> record<span class="token punctuation">.</span>meta<span class="token punctuation">.</span>requiresAuth<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 메타 필드 가져오기</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<hr>
+<h2>라우터에서의 데이터 핸들링</h2>
+<ul>
+<li>라우트가 활성화되면 서버에서 데이터를 가져와야함
+<ul>
+<li>탐색 후 가져오기
+<ul>
+<li>컴포넌트의 <code class="language-text">created()</code> 훅에서 데이터를 가져옴</li>
+<li>로드 상태를 표시 가능</li>
+</ul>
+</li>
+<li>탐색 전 가져오기
+<ul>
+<li>라우트 가드에서 네비게이션 전에 데이터를 가져옴</li>
+<li>가져오기 실패시, 경고 메세지 띄우는거 추천</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3>방법 1. 탐색 후</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>loading <span class="token operator">=</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 컴포넌트가 렌더링되면 데이터를 가져옴</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getData</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>방법 2. 탐색 전</h3>
+<hr>
+<h2>마무리</h2>
+<p>틀린 내용이 있다면 자유롭게 댓글로 달아주세요 :)</p></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><div class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© ChansNotes Powered By Gatsby</div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/vue/vue_router_tutorial2_navguard/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-7bbdb2232fb99d9fe37a.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-f34d2aeba15f7032a4bf.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-f0f8e58626fb6231ebc2.js\"],\"component---src-pages-info-tsx\":[\"/component---src-pages-info-tsx-d0ae3ad9d67ba3f96369.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-7e5e6bbc2f1a4481307f.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="8cd3e778de9a387d6eb9";</script><script src="/webpack-runtime-8c945fee3709d2d473f5.js" async></script><script src="/framework-6a525285796fb83f2864.js" async></script><script src="/app-7bbdb2232fb99d9fe37a.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.11.0"/><style data-href="/styles.9e907bc32054b7771552.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="https://chansnotes.github.io/vue/tutorial11_mixins/" data-baseprotocol="https:" data-basehost="chansnotes.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1e0szv80"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1024px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg%20height=&#x27;768&#x27;%20width=&#x27;1024&#x27;%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHA//EABYBAQEBAAAAAAAAAAAAAAAAAAEFCP/aAAwDAQACEAMQAAABQVqO8vPstKWJ/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAIEFBID/9oACAEBAAEFAkmXryiqRcxkHn7Mh//EACIRAAEBBgcAAAAAAAAAAAAAAAERAAIDFiIxEiEyUVJxkf/aAAgBAwEBPwGYIiGu+HdaStJsFs8uoZNMETmfem//xAAgEQABAwIHAAAAAAAAAAAAAAABABEhFjIzQVFSYWOh/9oACAECAQE/AaqL4rCHDnKQ2k3bhCqvs9PC/8QAJRAAAAQEBQUAAAAAAAAAAAAAAQIDEgAEETEQEyIyoRQhQWGC/9oACAEBAAY/Ai5gCyoPbub5p7Dm0LdaVMD54py2TtVl07zg1EWlmHFBFK5GKOE3aLYBoIWgU01t9GNxS8Wj/8QAHBABAQACAwEBAAAAAAAAAAAAEQEAITFxkVGx/9oACAEBAAE/IenPPJs2BuSwH04VvZWxLUmtQdXTHjrPZn6sjAOgbIG2uDq9mf/aAAwDAQACAAMAAAAQIP8A/8QAHREBAQABBAMAAAAAAAAAAAAAAREhQVFhcZGhwf/aAAgBAwEBPxAm2btGIgmVhMSiM9bq+uDx3P/EAB0RAQABBAMBAAAAAAAAAAAAAAERACExYUFRkfD/2gAIAQIBAT8QUCTMymd5OaS1hHipdOPo7fNNf//EABsQAQACAwEBAAAAAAAAAAAAAAEAESEx8BDR/9oACAEBAAE/EAOmhYSwV6tXyWUUGmjDjl/NZlUnqE7/ABh7GRxBASMMVHVwR4r/AP/Z" alt=""/><picture><source type="image/webp" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" data-src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">Vue.js 뽀개기 (11) 믹스인</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>vue<!-- --> </div><div>2019.06.13.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><blockquote>
+<p>본 글은 Udemy에서 제공하는 유료 강좌인 Vue.js Complete Guide를 수강하면서 정리한 내용입니다. 저작권 문제시 바로 글을 내리도록 하겠습니다.</p>
+</blockquote>
+<hr>
+<p>Vue를 공부 하면 할 수록 Vue 프레임웍은 정말 재사용 및 유지보수를 쉽게 만들어준다고 생각을 하게됩니다.
+만약 여러개의 컴포넌트에서 공통적으로 사용하는 기능이 있는데, 이를 매번 각 컴포넌트에 작성하게 된다면 귀찮은데다가 유지/보수도 어려워집니다.</p>
+<p>이에 대한 해결책으로 앞서 정리했었던 컴포넌트와 슬롯 등에 이어, <strong>믹스인 (Mixins)</strong> 이라는 기능을 Vue에서 제공합니다.</p>
+<p>제가 이해한 믹스인의 정의는 이렇습니다…</p>
+<blockquote>
+<h3>믹스인은 컴포넌트들에 재사용이 가능한 (캡슐화한) 기능을 배포하는 방법</h3>
+</blockquote>
+<p>이런 멋진 기능이 있었다니… 아래에서는 믹스인의 개념과 사용법에 대해 요약합니다.</p>
+<hr>
+<h2>믹스인은 언제 사용합니까?</h2>
+<ul>
+<li><strong>여러 컴포넌트에 공통적으로 사용하는 기능을 재사용</strong> 하고 싶을때</li>
+</ul>
+<h2>믹스인 적용 범위</h2>
+<ul>
+<li>믹스인을 불러오는 컴포넌트에서만 작동
+<ul>
+<li><code class="language-text">import</code>를 안한 컴포넌트는 안건드림</li>
+</ul>
+</li>
+</ul>
+<h2>믹스인 객체의 옵션들</h2>
+<ol>
+<li><code class="language-text">data</code></li>
+<li><code class="language-text">methods</code></li>
+<li><code class="language-text">comptued</code></li>
+<li><code class="language-text">created</code>와 같은 라이프사이클 콜백</li>
+<li>이외에도 Vue 인스턴스 옵션 사용 가능</li>
+</ol>
+<h2>믹스인 참고사항</h2>
+<ul>
+<li>믹스인에 정의한 기능들은 믹스인을 불러오는 컴포넌트의 고유 옵션과 혼합됨
+<ul>
+<li>컴포넌트 고유 옵션의 data를 없애지 않음</li>
+<li>컴포넌트 옵션에 믹스인 옵션이 <strong>추가</strong> 된다고 생각하면됨</li>
+</ul>
+</li>
+</ul>
+<h2>믹스인과 컴포넌트 객체간에 충돌하는 키가 있다면?</h2>
+<ul>
+<li>믹스인 옵션은 제공된 순서대로 호출됨</li>
+<li>믹스인 훅이 먼저 호출되고, 컴포넌트 훅이 다음에 호출됨
+<ul>
+<li><strong>충돌하는 키가 있다면, 컴포넌트 옵션이 호출됨</strong> (우선순위)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>믹스인 사용법</h2>
+<ul>
+<li>mixins 폴더에 <code class="language-text">__name__.js</code> 파일에 믹스인 정의</li>
+<li>vue 인스턴스를 만들듯이, 믹스인 인스턴스 작성
+<ul>
+<li><code class="language-text">export</code> 꼭 해주기</li>
+</ul>
+</li>
+<li>사용하려는 컴포넌트에서 해당 믹스인 파일을 <code class="language-text">import</code></li>
+<li>해당 컴포넌트 인스턴스에 <code class="language-text">mixins: [__name__]</code>으로 믹스인 호출</li>
+</ul>
+<h3>믹스인 사용 예시</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// clickCount.js</span>
+<span class="token keyword">export</span> <span class="token keyword">const</span> clickCount <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// Data 속성 정의</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">isShowing</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">clicked</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">// computed 속성 정의</span>
+  <span class="token comment">// clicked의 숫자가 1씩 증가하는 메소드</span>
+  <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">clickIncrement</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>clicked<span class="token operator">++</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- app.vue --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span> ... <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span>
+import { clickCount } from './clickCount.js';
+
+export default {
+    data() {
+      return {
+          name: 'helloWorld'
+      }
+    },
+    mixins: [clickCount]
+}</code></pre></div>
+<hr>
+<h2>Global 믹스인 (특별한 경우에만 사용!)</h2>
+<ul>
+<li>써드파티 컴포넌트를 포함하여 만들어진 모든 Vue 인스턴스에 적용됨</li>
+<li>프로덕션 환경에서는 비추천</li>
+<li><code class="language-text">main.js</code>에 정의하면 전역으로 사용가능</li>
+<li>Vue 파일이 2개면 3번 호출됨
+<ul>
+<li><code class="language-text">main.js</code>에서 한 번 이미 호출이 되기 때문</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// main.js에 믹스인을 정의하면, 전역 사용!</span>
+<span class="token operator">...</span>
+
+Vue<span class="token punctuation">.</span><span class="token function">mixin</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token literal-property property">name</span><span class="token operator">:</span> myName
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<hr>
+<p>만약 여러 컴포넌트들에서 공통으로 사용하는 기능이 있다면, 이를 믹스인으로 구현하여 활용하면 아주 유용하게 쓰일 것 같습니다.</p>
+<p>Vue에서는 DOM 엘리먼트를 조작하기 위해 디렉티브를 (<code class="language-text">v-if</code>와 <code class="language-text">v-on</code> 등) 사용합니다. 이미 정의된 디렉티브외에 내가 원하는 기능을 가진 디렉티브를 만들 수 있을까요?
+다음 글에서는 커스텀 디렉티브에 대해 요약하려고 합니다.</p>
+<p>틀린 내용이 있다면 자유롭게 댓글로 달아주세요 :)</p></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><div class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© ChansNotes Powered By Gatsby</div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/vue/tutorial11_mixins/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-7bbdb2232fb99d9fe37a.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-f34d2aeba15f7032a4bf.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-f0f8e58626fb6231ebc2.js\"],\"component---src-pages-info-tsx\":[\"/component---src-pages-info-tsx-d0ae3ad9d67ba3f96369.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-7e5e6bbc2f1a4481307f.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="8cd3e778de9a387d6eb9";</script><script src="/webpack-runtime-8c945fee3709d2d473f5.js" async></script><script src="/framework-6a525285796fb83f2864.js" async></script><script src="/app-7bbdb2232fb99d9fe37a.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>

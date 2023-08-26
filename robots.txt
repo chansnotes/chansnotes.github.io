@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://chansnotes.github.io/sitemap-index.xml
+Host: https://chansnotes.github.io

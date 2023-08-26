@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.11.0"/><style data-href="/styles.9e907bc32054b7771552.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="https://chansnotes.github.io/vue/tutorial8/" data-baseprotocol="https:" data-basehost="chansnotes.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1e0szv80"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1024px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg%20height=&#x27;768&#x27;%20width=&#x27;1024&#x27;%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHA//EABYBAQEBAAAAAAAAAAAAAAAAAAEFCP/aAAwDAQACEAMQAAABQVqO8vPstKWJ/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAIEFBID/9oACAEBAAEFAkmXryiqRcxkHn7Mh//EACIRAAEBBgcAAAAAAAAAAAAAAAERAAIDFiIxEiEyUVJxkf/aAAgBAwEBPwGYIiGu+HdaStJsFs8uoZNMETmfem//xAAgEQABAwIHAAAAAAAAAAAAAAABABEhFjIzQVFSYWOh/9oACAECAQE/AaqL4rCHDnKQ2k3bhCqvs9PC/8QAJRAAAAQEBQUAAAAAAAAAAAAAAQIDEgAEETEQEyIyoRQhQWGC/9oACAEBAAY/Ai5gCyoPbub5p7Dm0LdaVMD54py2TtVl07zg1EWlmHFBFK5GKOE3aLYBoIWgU01t9GNxS8Wj/8QAHBABAQACAwEBAAAAAAAAAAAAEQEAITFxkVGx/9oACAEBAAE/IenPPJs2BuSwH04VvZWxLUmtQdXTHjrPZn6sjAOgbIG2uDq9mf/aAAwDAQACAAMAAAAQIP8A/8QAHREBAQABBAMAAAAAAAAAAAAAAREhQVFhcZGhwf/aAAgBAwEBPxAm2btGIgmVhMSiM9bq+uDx3P/EAB0RAQABBAMBAAAAAAAAAAAAAAERACExYUFRkfD/2gAIAQIBAT8QUCTMymd5OaS1hHipdOPo7fNNf//EABsQAQACAwEBAAAAAAAAAAAAAAEAESEx8BDR/9oACAEBAAE/EAOmhYSwV6tXyWUUGmjDjl/NZlUnqE7/ABh7GRxBASMMVHVwR4r/AP/Z" alt=""/><picture><source type="image/webp" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" data-src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">Vue.js 뽀개기 (8) 컴포넌트 커뮤니케이션 - Props와 Emit</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>vue<!-- --> </div><div>2019.06.07.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><blockquote>
+<p>본 글은 Udemy에서 제공하는 유료 강좌인 Vue.js Complete Guide를 수강하면서 정리한 내용입니다. 저작권 문제시 바로 글을 내리도록 하겠습니다.</p>
+</blockquote>
+<hr>
+<p>Vue 어플리케이션을 만들다보면 컴포넌트들을 많이 생겨납니다.
+따라서, 보다 쉬운 유지 및 관리를 위해서 컴포넌트들을 부모와 자식의 형태로 분리시켜 유지하는 것이 좋습니다.</p>
+<p>만약에 자식 컴포넌트가 부모 컴포넌트의 데이터를 이용해야한다면, 어떻게 해야 할까요?</p>
+<p>컴포넌트간의 데이터 커뮤니케이션을 위해서는,
+부모에서 자식에게 데이터를 전달하는 Props 객체와
+자식이 부모에게 데이터 변경을 알리는 Emit 이벤트가 필요합니다.</p>
+<h2>애초에 왜 Props를 써야하는가?</h2>
+<ul>
+<li>모든 컴포넌트들은 자체 격리된 scope가 존재함</li>
+<li>하위 컴포넌트가 상위 컴포넌트의 data를 직접 참조 못함</li>
+<li>하위 컴포넌트끼리 data 직접 참조 못함</li>
+</ul>
+<hr>
+<h2>Props와 Emit 설명</h2>
+<p><img src="https://chansnotes.github.io/images/vue/vue_props1.jpeg" alt="Props 1"></p>
+<h3>Props</h3>
+<ul>
+<li>이를 Props를 통해 하위 컴포넌트로 전달하게됨 (단방향 바인딩) * 하위 컴포넌트가 부모 컴포넌트의 데이터 변경 불가</li>
+<li>자식 컴포넌트에서 접근하려는 부모 컴포넌트의 data 객체를 <code class="language-text">props</code> 로 명시해야함</li>
+<li>부모 컴포넌트에서 template 혹은 data 객체를 통해 전달</li>
+</ul>
+<h3>Emit</h3>
+<ul>
+<li>Emit event를 통해, 부모에게 변경된 데이터를 전달</li>
+<li>자식 컴포넌트에서 부모 컴포넌트로 커스텀 event를 <code class="language-text">emit</code></li>
+<li>부모 컴포넌트가 event를 <code class="language-text">v-on</code>으로 감지하기</li>
+</ul>
+<hr>
+<h2>Props 사용법</h2>
+<h3>부모 컴포넌트</h3>
+<ol>
+<li><code class="language-text">&lt;script></code> 태그에 자식 컴포넌트 import 후, component 및 data 객체 정의</li>
+<li><code class="language-text">&lt;template></code> 태그에 자식 컴포넌트를 불러오기</li>
+<li>자식 컴포넌트를 불러온 태그에 <code class="language-text">props_이름=“data_객체”</code>와 같은 형태로 정의</li>
+<li>(Option) 동적 바인딩을 위해 <code class="language-text">v-bind</code> 사용
+<ul>
+<li>부모 컴포넌트의 데이터가 업데이트 되면, 자식 컴포넌트도 변경됨</li>
+</ul>
+</li>
+</ol>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- User.vue ; 부모 컴포넌트 --></span>
+<span class="token comment">&lt;!-- name 데이터 객체를 UserDetail로 전달 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>component<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>changeName<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Change<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-user-detail</span> <span class="token attr-name">:my-name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-user-detail</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> UserDetail from <span class="token operator">...</span>
+
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+      <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'Max'</span>
+        <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">appUserDetail</span> <span class="token operator">:</span> UserDetail
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>자식 컴포넌트</h3>
+<ol>
+<li><code class="language-text">props: ['myProp']</code> 과 같은 형태로 props를 정의</li>
+<li>데이터를 불러올 부분에 <code class="language-text">{{ myProp }}</code> 으로 부모 컴포넌트의 data객체를 불러옴</li>
+</ol>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- UserDetail.vue ; 자식 컴포넌트 --></span>
+<span class="token comment">&lt;!-- 부모 컴포넌트에서 name 데이터를 전달받고, 이를 switchName 메소드로 처리 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>component<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    {% raw %}
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Name: {{ switchName() }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    {% endraw %}
+    <span class="token comment">&lt;!-- myName대신 methods인 switchName pass 가능 --></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'myName'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// template에 있는 name과 같아야함</span>
+    <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">switchName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>myName
+          <span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">revers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+        <span class="token comment">// this 사용 가능 = props는 일반 data나 methods 처럼 취급하기 때문에 가능함</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre></div>
+<hr>
+<h2>Props 사용시, 주의 사항들</h2>
+<h3>주의 사항 1: camelCase vs. kebab-case</h3>
+<ul>
+<li>DOM은 case-insensitive함 = 대소 문자를 구분 못함</li>
+<li>자식 컴포넌트에서 <code class="language-text">camelCase</code> 로 props를 정의했다면, 부모 컴포넌트 template에서 불러 올때는, <code class="language-text">&lt;child camel-case=“hello”>&lt;/child></code> 로 정의해서 데이터를 보내야함</li>
+</ul>
+<h3>주의사항 2: 리터럴 vs. 동적</h3>
+<ul>
+<li>부모 컴포넌트 template 태그에 자식 컴포넌트를 불러올 때 발생하는 실수 중, 리터럴 구문을 사용해서 JavaScript 숫자를 전달</li>
+<li><code class="language-text">' '</code> (Quotation mark) 안에 숫자를 적으면, 숫자가 아닌 문자 형태로 전달됨
+<ul>
+<li><strong><code class="language-text">v-bind</code>를 사용해서 숫자를 quotation mark 안에 정의</strong></li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- Literal case
+     아래의 경우는 숫자가 아닌 문자를 자식 컴포넌트로 전달 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>child</span> <span class="token attr-name">new-prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>child</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- Dynamic case
+     v-bind를 통해, 문자가 아니라 JavaScript 숫자를 전달 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>child</span> <span class="token attr-name">:new-prop</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>child</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>주의 사항 3: 다수의 데이터를 가진 객체 전달</h3>
+<ul>
+<li>props의 이름을 생략하고, <code class="language-text">v-bind</code> 만으로도 사용이 가능</li>
+</ul>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- 부모 컴포넌트에서 text와 isComplete라는 데이터를 가진 todo 객체 생성 --></span>
+<span class="token comment">&lt;!-- 여러개의 데이터를 가진 todo 객체의 이름을 생략하고, v-bind 만으로 props 생성 --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>todo-item</span> <span class="token attr-name">v-bind</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>todo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>todo-item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">todo</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+          <span class="token literal-property property">text</span><span class="token operator">:</span> <span class="token string">'new'</span><span class="token punctuation">,</span>
+          <span class="token literal-property property">isComplete</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- 위의 template는 아래와 같은 역할 --></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>todo-item</span>
+    <span class="token attr-name"><span class="token namespace">v-bind:</span>text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>todo.text<span class="token punctuation">"</span></span>
+    <span class="token attr-name"><span class="token namespace">v-bind:</span>is-complete</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>todo.isComplete<span class="token punctuation">"</span></span>
+  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>todo-item</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span></code></pre></div>
+<h3>주의 사항 4: 자식 컴포넌트에서 Props 데이터를 저장 및 변경하고 싶을 때</h3>
+<ul>
+<li>자식 컴포넌트에서 <code class="language-text">computed property</code> 사용해서 데이터를 변경
+<ol>
+<li>Props를 통해 부모 컴포넌트의 데이터 받아오기</li>
+<li>받아온 props 데이터를 자식 컴포넌트에서 local variable로 선언 (= 저장)</li>
+<li>computed property를 통해 연산 수행 (= 변경)</li>
+</ol>
+</li>
+</ul>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// props value를 local variable로 정의</span>
+<span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'initialcount'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+<span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">counter</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>initialcount <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token comment">// props value를 가지고 연산 수행</span>
+<span class="token literal-property property">computed</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">incrementCount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>initialcount<span class="token operator">++</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<h3>주의 사항 5: 부모 컴포넌트의 속성을 받지 않기</h3>
+<ul>
+<li>부모 컴포넌트에서 정의한 속성을 자식 컴포넌트의 속성으로 설정 하지 않는 방법</li>
+<li><code class="language-text">inhertAttrs: false</code> 를 자식 컴포넌트에 정의</li>
+</ul>
+<hr>
+<h2>Props 검증</h2>
+<ul>
+<li>자식 컴포넌트가 props를 받을 때, 특정 요구사항을 충족시키도록 지정할 수 있음</li>
+<li>Props에 정의가 가능한 <code class="language-text">type</code>에는 7가지 존재
+_ String
+_ Number
+_ Boolean
+_ Function
+_ Object
+_ Array * Symbol</li>
+<li>Props 내부에 <code class="language-text">default</code> (기본 값) 설정 가능</li>
+<li>Props 내부에 <code class="language-text">validator</code> (사용자 정의 유효성 검사 함수) 설정 가능</li>
+<li>Props는 컴포넌트 인스턴스 생성 전에 검증됨 * <strong>default 혹은 validator 함수 내에서 data, computed, methods와 같은 인스턴스 속성은 사용이 불가능</strong></li>
+</ul>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+	<span class="token comment">// 기본 타입은 null = 어떤 type이던 ok!</span>
+	<span class="token comment">// 숫자만 가능</span>
+	<span class="token literal-property property">propA</span><span class="token operator">:</span> Number<span class="token punctuation">,</span>
+	<span class="token comment">// String or Number 가능</span>
+	<span class="token literal-property property">propB</span><span class="token operator">:</span> <span class="token punctuation">[</span>String<span class="token punctuation">,</span> Number<span class="token punctuation">]</span><span class="token punctuation">,</span>
+	<span class="token comment">// String이 무조건 필요</span>
+	<span class="token literal-property property">propC</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+		<span class="token literal-property property">required</span><span class="token operator">:</span> <span class="token boolean">true</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token comment">// 기본 값 100을 가지는 Number</span>
+	<span class="token literal-property property">propD</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">type</span><span class="token operator">:</span> Number<span class="token punctuation">,</span>
+		<span class="token keyword">default</span><span class="token operator">:</span> <span class="token number">100</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token comment">// 객체 및 배열의 기본값은 팩토리 함수에서 반환 되어야함</span>
+	<span class="token literal-property property">propE</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token literal-property property">type</span><span class="token operator">:</span> Object<span class="token punctuation">,</span>
+		<span class="token function-variable function">default</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'hello'</span><span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span>
+	<span class="token comment">// Customized 유효성 검사</span>
+	<span class="token literal-property property">propF</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+		<span class="token function-variable function">validator</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+			<span class="token keyword">return</span> value <span class="token operator">></span> <span class="token number">10</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></div>
+<hr>
+<h2>Emit Event 사용법 (자식에서 부모로!)</h2>
+<ul>
+<li><code class="language-text">$on(eventName)</code> = 이벤트를 감지
+_ <code class="language-text">$on</code>은 자식에서 호출한 event는 감지 안함
+_ <code class="language-text">v-on</code>은 반드시 template에 지정해야함</li>
+<li><code class="language-text">$emit(eventName)</code> = Parent로 커스텀 Event 보내기</li>
+<li>Parent에서 Event를 Listen 하기 (<code class="language-text">@</code> 사용)</li>
+</ul>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- 부모 컴포넌트 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>component<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>changeName<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Change<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>row<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+      <span class="token comment">&lt;!-- 이벤트 청취! --></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-user-detail</span>
+        <span class="token attr-name">:name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span>
+        <span class="token attr-name">@nameResetted</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>name = $event<span class="token punctuation">"</span></span>
+      <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-user-detail</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>app-user-edit</span><span class="token punctuation">></span></span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>app-user-edit</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+<span class="token comment">&lt;!-- 이하 생략 --></span></code></pre></div>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- 자식 컴포넌트 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>component<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>Name: {{ myName }}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+    <span class="token comment">&lt;!-- myName대신 methods인 switchName pass 가능 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>resetName<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Reset<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span> // Reset 버튼 추가
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">props</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">myName</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token literal-property property">type</span><span class="token operator">:</span> String<span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// template에 있는 name과 같아야함</span>
+    <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token function">switchName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>myName
+          <span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">revers</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+          <span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+        <span class="token comment">// this 사용 가능 = props는 일반 data나 methods 처럼 취급하기 때문에 가능함</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token function">resetName</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>myName <span class="token operator">=</span> <span class="token string">'Max'</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'nameResetted'</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>myName<span class="token punctuation">)</span> <span class="token comment">// Emit Event로 Parent 컴포넌트에 쏴주기</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre></div>
+<h2>비 부모 - 자식간의 통신은? (내용 보충 필요..)</h2>
+<p><img src="https://chansnotes.github.io/images/vue/vue_props1.jpeg" alt="Props 2"></p>
+<ul>
+<li>부모 컴포넌트에 정의되지 않은 자식 컴포넌트들 간에 데이터 객체를 전달 할 수 있음</li>
+<li>아무것도 정의하지 않은 (비어있는) Vue 인스턴스를 <strong>이벤트 버스</strong> 로 사용</li>
+</ul>
+<ol>
+<li>커스텀 Event 생성 (Emit)</li>
+</ol>
+<ul>
+<li>Parent로 Emit</li>
+<li>Parent에서 event listen</li>
+<li>Child2에서 값을 읽어들임</li>
+</ul>
+<ol start="2">
+<li>Callback 사용</li>
+<li><strong>EventBus 사용 (Best Option)</strong></li>
+</ol>
+<ul>
+<li>main.js 파일에 새로운 Vue 오브젝트 생성
+<ul>
+<li><code class="language-text">export const eventBus = new Vue();</code></li>
+<li>methods 생성
+<ul>
+<li><code class="language-text">changeAge(age) { this.$emit('ageWasEdited', age);}</code> = Emit logic in EventBus</li>
+<li>기존에 <code class="language-text">eventBus.$emit()</code>안써도 됨</li>
+<li><code class="language-text">eventBus.changeAge(this.userAge);</code>로 간단하게 불러올수 있음</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li><code class="language-text">{ eventBus }</code> 를 import 하기</li>
+<li>Method에 <code class="language-text">eventBus.$emit(...)</code> = Child 컴포넌트에 emit된것이 아니라, eventBus로 emit됨</li>
+<li>불러오려는 child에서 새로운 method 생성
+<ul>
+<li><code class="language-text">eventBus.$on(name, (data)=> { this.name = ...;});</code> 으로 불러오기</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2>기타 유용한 팁들</h2>
+<h3>컴포넌트에 Native 이벤트 바인딩</h3>
+<ul>
+<li>컴포넌트의 root element에서 네이티브 이벤트를 수신하고자 할 때</li>
+<li>.native 를 v-on에 붙여 사용</li>
+<li><code class="language-text">v-on:click.native="doSomething"</code></li>
+</ul>
+<h3>양방향 바인딩</h3>
+<ul>
+<li>Props는 기본적으로 단방향 바인딩임 (부모에서 자식만 가능)</li>
+<li><code class="language-text">.sync</code>를 사용하면, 자식에서의 변경이 부모에 반영됨
+<ul>
+<li>자동으로 <code class="language-text">v-on</code>으로 확장됨</li>
+</ul>
+</li>
+<li>2.0 버전에서 삭제되었다가, 2.3에 다시 부활
+_ 재사용 가능한 컴포넌트 만들 때 유용
+_ 부모 상태에 영향을 미치기 때문에, 유지보수 문제 발생 가능성 * 자식 컴포넌트에서 명시적으로 이벤트를 보내서 부모 컴포넌트에 변경사항 전달</li>
+</ul>
+<div class="gatsby-highlight" data-language="html"><pre class="language-html"><code class="language-html"><span class="token comment">&lt;!-- .sync 사용하는 부모 컴포넌트 코드 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>comp</span> <span class="token attr-name">:foo.sync</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>comp</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- 위와 똑같은 역할을 하는 코드 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>comp</span> <span class="token attr-name">:foo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>bar<span class="token punctuation">"</span></span> <span class="token attr-name"><span class="token namespace">@update:</span>foo</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>val => bar = val<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>comp</span><span class="token punctuation">></span></span>
+
+<span class="token comment">&lt;!-- 자식 컴포넌트에서 foo를 갱신하는 코드
+     속성 변경 대신, event를 emit  --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'update:foo'</span><span class="token punctuation">,</span> newValue<span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre></div>
+<hr>
+<p>이번 포스트에서는 Vue 컴포넌트간의 커뮤니케이션 방법인 Props와 Emit에 대해 정리하였습니다.
+다음편에는 Slot에 대해 정리하겠습니다.</p>
+<p>부실한 내용이나 틀린 내용이 있다면 자유롭게 댓글로 달아주세요 :)</p></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><div class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© ChansNotes Powered By Gatsby</div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/vue/tutorial8/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-7bbdb2232fb99d9fe37a.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-f34d2aeba15f7032a4bf.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-f0f8e58626fb6231ebc2.js\"],\"component---src-pages-info-tsx\":[\"/component---src-pages-info-tsx-d0ae3ad9d67ba3f96369.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-7e5e6bbc2f1a4481307f.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="8cd3e778de9a387d6eb9";</script><script src="/webpack-runtime-8c945fee3709d2d473f5.js" async></script><script src="/framework-6a525285796fb83f2864.js" async></script><script src="/app-7bbdb2232fb99d9fe37a.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
