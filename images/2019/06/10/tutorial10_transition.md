@@ -3,7 +3,7 @@ layout: PostLayout
 title: 'Vue.js 뽀개기 (10) 트랜지션과 애니메이션 적용하기'
 topic: 'coding'
 category: vue
-thumbnail: '../../images/vue/logo.jpeg'
+thumbnail: '../../../../images/vue/logo.jpeg'
 read_time: true
 comments: true
 permalink: /:year/:month/:day/:slug
@@ -58,7 +58,7 @@ Vue에서도 CSS 트랜지션 및 애니메이션을 구현할 수 있습니다.
 
 - 진입 및 진출 트랜지션에는 총 6가지 클래스가 존재
 
-![transition_class](../../images/vue/vue_transition.png)
+![transition_class](../../../../images/vue/vue_transition.png)
 
 1. `v-enter`
 2. `v-enter-active`

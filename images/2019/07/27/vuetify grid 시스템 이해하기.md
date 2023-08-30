@@ -3,7 +3,7 @@ layout: PostLayout
 title: '[Vuetify] (1) Grid 시스템 이해하기'
 topic: 'coding'
 category: vue
-thumbnail: '../../images/vue/vuetify.png'
+thumbnail: '../../../../images/vue/vuetify.png'
 read_time: true
 comments: true
 permalink: /:year/:month/:day/:slug
@@ -33,7 +33,7 @@ Vuetify에서 Grid system은 먼저 `v-container`로 컨텐츠를 담을 컨테�
 
 순서: `v-container` >> `v-layout` >> `v-flex` (>> `v-card`)
 
-![Vuetify Grid](../../images/vue/grid.png)
+![Vuetify Grid](../../../../images/vue/grid.png)
 
 ---
 
