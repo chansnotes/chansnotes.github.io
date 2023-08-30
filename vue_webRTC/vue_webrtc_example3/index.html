@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 5.11.0"/><style data-href="/styles.9e907bc32054b7771552.css" data-identity="gatsby-global-css">code[class*=language-],pre[class*=language-]{word-wrap:normal;background:none;color:#ccc;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;font-size:1em;-webkit-hyphens:none;hyphens:none;line-height:1.5;tab-size:4;text-align:left;white-space:pre;word-break:normal;word-spacing:normal}pre[class*=language-]{margin:.5em 0;overflow:auto;padding:1em}:not(pre)>code[class*=language-],pre[class*=language-]{background:#2d2d2d}:not(pre)>code[class*=language-]{border-radius:.3em;padding:.1em;white-space:normal}.token.block-comment,.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#999}.token.punctuation{color:#ccc}.token.attr-name,.token.deleted,.token.namespace,.token.tag{color:#e2777a}.token.function-name{color:#6196cc}.token.boolean,.token.function,.token.number{color:#f08d49}.token.class-name,.token.constant,.token.property,.token.symbol{color:#f8c555}.token.atrule,.token.builtin,.token.important,.token.keyword,.token.selector{color:#cc99cd}.token.attr-value,.token.char,.token.regex,.token.string,.token.variable{color:#7ec699}.token.entity,.token.operator,.token.url{color:#67cdcc}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}.token.inserted{color:green}</style><style>.gatsby-image-wrapper{position:relative;overflow:hidden}.gatsby-image-wrapper picture.object-fit-polyfill{position:static!important}.gatsby-image-wrapper img{bottom:0;height:100%;left:0;margin:0;max-width:none;padding:0;position:absolute;right:0;top:0;width:100%;object-fit:cover}.gatsby-image-wrapper [data-main-image]{opacity:0;transform:translateZ(0);transition:opacity .25s linear;will-change:opacity}.gatsby-image-wrapper-constrained{display:inline-block;vertical-align:top}</style><noscript><style>.gatsby-image-wrapper noscript [data-main-image]{opacity:1!important}.gatsby-image-wrapper [data-placeholder-image]{opacity:0!important}</style></noscript><script type="module">const e="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;e&&document.body.addEventListener("load",(function(e){const t=e.target;if(void 0===t.dataset.mainImage)return;if(void 0===t.dataset.gatsbyImageSsr)return;let a=null,n=t;for(;null===a&&n;)void 0!==n.parentNode.dataset.gatsbyImageWrapper&&(a=n.parentNode),n=n.parentNode;const o=a.querySelector("[data-placeholder-image]"),r=new Image;r.src=t.currentSrc,r.decode().catch((()=>{})).then((()=>{t.style.opacity=1,o&&(o.style.opacity=0,o.style.transition="opacity 500ms linear")}))}),!0);</script><link rel="canonical" href="https://chansnotes.github.io/vue_webRTC/vue_webrtc_example3/" data-baseprotocol="https:" data-basehost="chansnotes.github.io"/><link rel="sitemap" type="application/xml" href="/sitemap-index.xml"/><script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>            
+              (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-7299119014849148",
+                enable_page_level_ads: true
+              });
+          </script></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><style data-emotion="css 13ku56z">.css-13ku56z{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;height:100%;}</style><main class="css-13ku56z e1e0szv80"><style data-emotion="css-global kxm5mf">@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');*{padding:0;margin:0;box-sizing:border-box;font-family:'Nanum Myeongjo',serif;}html,body,#___gatsby{height:100%;}a,a:hover{color:inherit;-webkit-text-decoration:none;text-decoration:none;cursor:pointer;}</style><style data-emotion="css 16cz9yp">.css-16cz9yp{position:relative;width:100%;height:400px;}@media (max-width: 768px){.css-16cz9yp{height:300px;}}</style><div class="css-16cz9yp e1opi4mu1"><style data-emotion="css 1bjn9yo">.css-1bjn9yo{z-index:-1;width:100%;height:400px;object-fit:cover;-webkit-filter:brightness(0.25);filter:brightness(0.25);}@media (max-width: 768px){.css-1bjn9yo{height:300px;}}</style><div data-gatsby-image-wrapper="" style="position:absolute" class="gatsby-image-wrapper gatsby-image-wrapper-constrained css-1bjn9yo e1opi4mu0"><div style="max-width:1024px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg%20height=&#x27;768&#x27;%20width=&#x27;1024&#x27;%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><img aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear" decoding="async" src="data:image/jpeg;base64,/9j/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/2wBDAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQH/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQHA//EABYBAQEBAAAAAAAAAAAAAAAAAAEFCP/aAAwDAQACEAMQAAABQVqO8vPstKWJ/8QAGRAAAwEBAQAAAAAAAAAAAAAAAAIEFBID/9oACAEBAAEFAkmXryiqRcxkHn7Mh//EACIRAAEBBgcAAAAAAAAAAAAAAAERAAIDFiIxEiEyUVJxkf/aAAgBAwEBPwGYIiGu+HdaStJsFs8uoZNMETmfem//xAAgEQABAwIHAAAAAAAAAAAAAAABABEhFjIzQVFSYWOh/9oACAECAQE/AaqL4rCHDnKQ2k3bhCqvs9PC/8QAJRAAAAQEBQUAAAAAAAAAAAAAAQIDEgAEETEQEyIyoRQhQWGC/9oACAEBAAY/Ai5gCyoPbub5p7Dm0LdaVMD54py2TtVl07zg1EWlmHFBFK5GKOE3aLYBoIWgU01t9GNxS8Wj/8QAHBABAQACAwEBAAAAAAAAAAAAEQEAITFxkVGx/9oACAEBAAE/IenPPJs2BuSwH04VvZWxLUmtQdXTHjrPZn6sjAOgbIG2uDq9mf/aAAwDAQACAAMAAAAQIP8A/8QAHREBAQABBAMAAAAAAAAAAAAAAREhQVFhcZGhwf/aAAgBAwEBPxAm2btGIgmVhMSiM9bq+uDx3P/EAB0RAQABBAMBAAAAAAAAAAAAAAERACExYUFRkfD/2gAIAQIBAT8QUCTMymd5OaS1hHipdOPo7fNNf//EABsQAQACAwEBAAAAAAAAAAAAAAEAESEx8BDR/9oACAEBAAE/EAOmhYSwV6tXyWUUGmjDjl/NZlUnqE7/ABh7GRxBASMMVHVwR4r/AP/Z" alt=""/><picture><source type="image/webp" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" data-src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" data-srcset="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture><noscript><picture><source type="image/webp" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/e92ac/logo.webp 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/dcf1b/logo.webp 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/afeb4/logo.webp 1024w" sizes="(min-width: 1024px) 1024px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 1024px) 1024px, 100vw" decoding="async" loading="lazy" src="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg" srcSet="/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/d04ec/logo.jpg 256w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/6f7c6/logo.jpg 512w,/static/f7a2cb1b53db588bfdc14d4b5dcd2d35/ffa24/logo.jpg 1024w" alt="thumbnail"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div><style data-emotion="css m1156n">.css-m1156n{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;height:100%;margin:0 auto;padding:60px 0;color:#ffffff;}@media (max-width: 768px){.css-m1156n{width:100%;padding:40px 20px;}}</style><div class="css-m1156n e1st1jau3"><style data-emotion="css gywgo7">.css-gywgo7{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#ffffff;color:#000000;font-size:22px;cursor:pointer;box-shadow:0 0 10px rgba(0, 0, 0, 0.3);}@media (max-width: 768px){.css-gywgo7{width:30px;height:30px;font-size:18px;}}</style><div class="css-gywgo7 e1st1jau2"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="arrow-left" class="svg-inline--fa fa-arrow-left " role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"></path></svg></div><style data-emotion="css gn4qtp">.css-gn4qtp{display:-webkit-box;overflow:hidden;overflow-wrap:break-word;margin-top:auto;text-overflow:ellipsis;white-space:normal;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:45px;font-weight:800;}@media (max-width: 768px){.css-gn4qtp{font-size:30px;}}</style><div class="css-gn4qtp e1st1jau1">[Vue+WebRTC] (3) Socket.io 서버 설정</div><style data-emotion="css 3gcnt2">.css-3gcnt2{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;margin-top:10px;font-size:18px;font-weight:700;}@media (max-width: 768px){.css-3gcnt2{-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-align-items:flex-start;-webkit-box-align:flex-start;-ms-flex-align:flex-start;align-items:flex-start;font-size:15px;font-weight:400;}}</style><div class="css-3gcnt2 e1st1jau0"><div>vueRTC<!-- --> </div><div>2019.08.04.</div></div></div></div><style data-emotion="css uo146q">.css-uo146q{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;width:768px;margin:0 auto;padding:100px 0;word-break:break-all;line-height:1.8;font-size:16px;font-weight:400;}.css-uo146q p{padding:3px 0;}.css-uo146q h1,.css-uo146q h2,.css-uo146q h3{font-weight:800;margin-bottom:30px;}.css-uo146q *+h1,.css-uo146q *+h2,.css-uo146q *+h3{margin-top:80px;}.css-uo146q hr+h1,.css-uo146q hr+h2,.css-uo146q hr+h3{margin-top:0;}.css-uo146q h1{font-size:30px;}.css-uo146q h2{font-size:25px;}.css-uo146q h3{font-size:20px;}.css-uo146q blockquote{margin:30px 0;padding:5px 15px;border-left:2px solid #000000;font-weight:800;}.css-uo146q ol,.css-uo146q ul{margin-left:20px;padding:30px 0;}.css-uo146q hr{border:1px solid #000000;margin:100px 0;}.css-uo146q a{color:#4263eb;-webkit-text-decoration:underline;text-decoration:underline;}.css-uo146q pre[class*='language-']{margin:30px 0;padding:15px;font-size:15px;}.css-uo146q pre[class*='language-']::-webkit-scrollbar-thumb{background:rgba(255, 255, 255, 0.5);border-radius:3px;}.css-uo146q code[class*='language-'],.css-uo146q pre[class*='language-']{tab-size:2;}@media (max-width: 768px){.css-uo146q{width:100%;padding:80px 20px;line-height:1.6;font-size:14px;}.css-uo146q h1{font-size:23px;}.css-uo146q h2{font-size:20px;}.css-uo146q h3{font-size:17px;}.css-uo146q img{width:100%;}.css-uo146q hr{margin:50px 0;}}</style><div class="css-uo146q e1ijh0y10"><h2>목적</h2>
+<ul>
+<li>파트1~2에서 제작한 웹 캠을 띄워주는 Vue 앱을 Socket.io와 함께 사용하기 위해 Node 서버를 구축</li>
+<li>socket.io를 이용해서, 로컬 접속자들끼리 room을 만들고 접속이 가능하도록 만들 예정</li>
+<li>접속한 room에서는 유저들끼리 비디오를 공유 가능하도록 설정</li>
+</ul>
+<h2>기본설정</h2>
+<ul>
+<li>Client (기존 Vue 앱)에서 <code class="language-text">node run build</code>로 배포가 가능한 형태로 만들어주기</li>
+<li>생성된 <code class="language-text">dist</code> 폴더를 서버 폴더에 옮겨주기</li>
+<li>서버 폴더에서 <code class="language-text">npm init</code></li>
+<li>Dependencies 설치해주기
+<ul>
+<li><code class="language-text">npm install express --save</code></li>
+<li><code class="language-text">npm install socket.io --save</code></li>
+<li><code class="language-text">npm install path --save</code></li>
+<li><code class="language-text">npm install https --save</code></li>
+<li><code class="language-text">npm install cors save</code></li>
+</ul>
+</li>
+</ul>
+<h3>바뀐 폴더 구조</h3>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token builtin class-name">.</span>
+├── server     --<span class="token operator">></span> 서버 폴더
+│   ├── index.js
+│   ├── dist           --<span class="token operator">></span> Vue client를 build한 결과물
+│   ├── node_modules
+│   └── package.json
+│
+├── client/src         --<span class="token operator">></span> Vue client
+│   ├── main.js
+│   ├── App.vue
+│   ├── assets
+│   └── components</code></pre></div>
+<hr>
+<h2>Step 1. 소켓 서버 구축</h2>
+<h3>Express를 사용하는 기본 서버 구축</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// index.js</span>
+
+<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">const</span> hostname <span class="token operator">=</span> <span class="token string">'yourIP'</span>
+<span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">8080</span> <span class="token comment">// port 8080에 로컬 서버를 구축</span>
+
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'*'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">sendFile</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'/dist/index.html'</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Listening at http://%s:%s/'</span><span class="token punctuation">,</span> hostname<span class="token punctuation">,</span> port<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre></div>
+<ul>
+<li>여기까지 마쳤다면, <code class="language-text">node index.js</code>를 실행하면, build한 Vue 앱이 성공적으로 <code class="language-text">yourIP:8080</code>에서 구동되는 것을 확인 가능</li>
+</ul>
+<hr>
+<h2>Step 2. https + Socket.io 사용하기</h2>
+<h3>http에서 https로 바꾸기 (매우 중요)</h3>
+<ul>
+<li>한가지 주의해야 할 점은, MediaStream은 secure한 환경에서만 동작</li>
+<li>이 말은 http 주소에서는 실행이 안되고, https 여야지만 실행됨</li>
+<li>일단은 인증키를 생성해야함</li>
+</ul>
+<h3>SSH 키 생성하기 (맥북 기준)</h3>
+<p><a href="https://webactually.com/2018/11/http%EC%97%90%EC%84%9C-https%EB%A1%9C-%EC%A0%84%ED%99%98%ED%95%98%EA%B8%B0-%EC%9C%84%ED%95%9C-%EC%99%84%EB%B2%BD-%EA%B0%80%EC%9D%B4%EB%93%9C/" target="_blank" rel="nofollow">참조</a></p>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// Generate a file containing RSA key</span>
+<span class="token comment">// openssl genrsa 1024 > file.pem</span>
+
+<span class="token comment">// Generate crs.pem and leave blank for input data</span>
+<span class="token comment">// openssl req -new -key file.pem -out csr.pem</span>
+
+<span class="token comment">// Create crt file containing SSL certificate</span>
+<span class="token comment">// openssl x509 -req -days 365 -in csr.pem -signkey file.pem -out file.crt</span></code></pre></div>
+<h3>index.js 파일 수정</h3>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// index.js</span>
+
+<span class="token keyword">const</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'path'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> https <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'https'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Cross-origin 허용해주기</span>
+<span class="token comment">// SPA 앱에서는 RESTful API 기반으로 비동기 통신을 하기 때문에,</span>
+<span class="token comment">// API 서버와 웹 페이지 서버가 다른 경우 CORS 제한이 걸림</span>
+<span class="token keyword">const</span> cors <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'cors'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> port <span class="token operator">=</span> <span class="token number">8080</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Need to solve self-signed issue...</span>
+<span class="token comment">//</span>
+<span class="token comment">// http://www.benjiegillam.com/2012/06/node-dot-js-ssl-certificate-chain/</span>
+<span class="token keyword">const</span> options <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">key</span><span class="token operator">:</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'./file.pem'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">cert</span><span class="token operator">:</span> fs<span class="token punctuation">.</span><span class="token function">readFileSync</span><span class="token punctuation">(</span><span class="token string">'./file.crt'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">const</span> server <span class="token operator">=</span> https<span class="token punctuation">.</span><span class="token function">createServer</span><span class="token punctuation">(</span>options<span class="token punctuation">,</span> app<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> socketIO <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'socket.io'</span><span class="token punctuation">)</span><span class="token punctuation">(</span>server<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token function">static</span><span class="token punctuation">(</span>path<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span><span class="token function">cors</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+app<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">'*'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
+  res<span class="token punctuation">.</span><span class="token function">sendFile</span><span class="token punctuation">(</span>__dirname<span class="token punctuation">,</span> <span class="token string">'/dist/index.html'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+io<span class="token punctuation">.</span>sockets<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'connection'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">socket</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token comment">// 연결되면 소켓 아이디를 콘솔에 출력</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>socket<span class="token punctuation">.</span>id<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+
+server<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span>port<span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'server up and running at %s port'</span><span class="token punctuation">,</span> port<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre></div>
+<hr>
+<h2>Step 3. Vue 컴포넌트 작성</h2>
+<ul>
+<li>WebRTC step 5 예제에 맞추어 작성</li>
+<li>기본적으로 필요한 변수들을 data 속성에 정의할거임</li>
+<li>그리고 <code class="language-text">socket</code> 변수를 사용해서 node.js 소켓 서버에 연결할거임</li>
+</ul>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token comment">// RTCPeerSocket.vue</span>
+<span class="token comment">// 이 컴포넌트에 소켓 클라이언트를 만듬</span>
+<span class="token keyword">import</span> io <span class="token keyword">from</span> <span class="token string">'socket.io-client'</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token function-variable function">data</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">isConnected</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isChannelReady</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isInitiator</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">isStarted</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">localStream</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Object <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">pc</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Object <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token comment">// RTCPeerConnection 객체</span>
+    <span class="token literal-property property">remoteStream</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token literal-property property">type</span><span class="token operator">:</span> Object <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">turnReady</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">pcConfig</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token literal-property property">iceServers</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 로컬 서버에서만 사용할거라, 따로 설정안함</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">sdpConstraints</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 아래 값은 legacy로 설정되어있음</span>
+      <span class="token comment">// 참조: https://developer.mozilla.org/en-US/docs/Web/API/RTCPeerConnection/createOffer</span>
+      <span class="token literal-property property">offerToReceiveAudio</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">offerToReceiveVideo</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token comment">// 임의로 설정된 room의 이름</span>
+    <span class="token literal-property property">room</span><span class="token operator">:</span> <span class="token string">'foo'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">message</span><span class="token operator">:</span> <span class="token string">'hello'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">socket</span><span class="token operator">:</span> <span class="token function">io</span><span class="token punctuation">(</span><span class="token string">'https://yourIP:8080'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token comment">// 이 주소에 설정된 소켓 서버와 연결</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre></div>
+<hr>
+<h2>이전 시도: vue-socket.io 사용 (틀린 방법)</h2>
+<ul>
+<li>socket.io를 직접 다운로드 받아서 설정할 수 있으나, vue-socket 라이브러리가 존재해서 이를 사용하기로 결정</li>
+<li><code class="language-text">vue-socket.io</code> 라이브러리 사용법 공부 필요…</li>
+</ul>
+<h3>설치 및 설정 (Vue 클라이언트)</h3>
+<ol>
+<li><code class="language-text">npm install vue-socket.io socket.io-client --save</code>로 라이브러리 설치</li>
+<li>아래와 같이 <code class="language-text">main.js</code> 파일 수정해주기</li>
+</ol>
+<ul>
+<li>…이렇게 하는 줄 알았는데, <code class="language-text">vue-socket.io</code>는 소켓 서버를 만드는거고</li>
+<li><code class="language-text">socket.io-client</code>를 사용해서 이미 만들어진 node.js 소켓 서버에 연결을 시켜야함</li>
+</ul>
+<div class="gatsby-highlight" data-language="js"><pre class="language-js"><code class="language-js"><span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+<span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+<span class="token keyword">import</span> router <span class="token keyword">from</span> <span class="token string">'./router'</span>
+<span class="token keyword">import</span> store <span class="token keyword">from</span> <span class="token string">'./store'</span>
+<span class="token keyword">import</span> <span class="token string">'./registerServiceWorker'</span>
+<span class="token keyword">import</span> vuetify <span class="token keyword">from</span> <span class="token string">'./plugins/vuetify'</span>
+<span class="token keyword">import</span> adapter <span class="token keyword">from</span> <span class="token string">'webrtc-adapter'</span>
+<span class="token keyword">import</span> socketIO <span class="token keyword">from</span> <span class="token string">'vue-socket.io'</span>
+<span class="token keyword">import</span> io <span class="token keyword">from</span> <span class="token string">'socket.io-client'</span>
+
+Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span>
+
+<span class="token keyword">const</span> SocketInstance <span class="token operator">=</span> io<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token string">'https://yourip:8080'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// query: {</span>
+  <span class="token comment">//     token: window.localStorage.getItem('auth')</span>
+  <span class="token comment">// }</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// socket.io 인스턴스를 Vue앱에서 사용하도록 활성화</span>
+Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>
+  <span class="token keyword">new</span> <span class="token class-name">socketIO</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">debug</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">connection</span><span class="token operator">:</span> SocketInstance<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  router<span class="token punctuation">,</span>
+  store<span class="token punctuation">,</span>
+  vuetify<span class="token punctuation">,</span>
+  adapter<span class="token punctuation">,</span>
+  <span class="token function-variable function">render</span><span class="token operator">:</span> <span class="token parameter">h</span> <span class="token operator">=></span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span></code></pre></div>
+<hr>
+<h2>마무리</h2>
+<ul>
+<li>조금 귀찮은점:
+<ul>
+<li>Vue 클라이언트 디버깅하려면 <code class="language-text">npm run build</code>한 결과물인 <code class="language-text">dist</code> 폴더를 계속해서 소켓 서버 폴더에 넣어줘야함… (더 쉬운방법이 있을까???)</li>
+</ul>
+</li>
+</ul>
+<p>다음에는 Socket.io 서버에 room 설정 등과 같은 이벤트 핸들러들을 추가해서 서버쪽 작업을 끝내려고 합니다.</p></div><style data-emotion="css 9w9jmx">.css-9w9jmx{display:grid;place-items:center;margin-top:auto;padding:50px 0;font-size:15px;text-align:center;line-height:1.5;}@media (max-width: 768px){.css-9w9jmx{font-size:13px;}}</style><div class="css-9w9jmx e1oae0v80">Thank You for Visiting My Blog, Have a Good Day 😆<br/>© ChansNotes Powered By Gatsby</div></main></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/vue_webRTC/vue_webrtc_example3/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+          <script
+            id="gatsby-chunk-mapping"
+          >
+            window.___chunkMapping="{\"app\":[\"/app-7bbdb2232fb99d9fe37a.js\"],\"component---src-pages-404-tsx\":[\"/component---src-pages-404-tsx-f34d2aeba15f7032a4bf.js\"],\"component---src-pages-index-tsx\":[\"/component---src-pages-index-tsx-d1e72f96e2cf45cc0c67.js\"],\"component---src-pages-info-tsx\":[\"/component---src-pages-info-tsx-d0ae3ad9d67ba3f96369.js\"],\"component---src-templates-post-template-tsx\":[\"/component---src-templates-post-template-tsx-7e5e6bbc2f1a4481307f.js\"]}";
+          </script>
+        <script>window.___webpackCompilationHash="2526b907e20fc848c874";</script><script src="/webpack-runtime-70d8ae8de7c11c59d086.js" async></script><script src="/framework-6a525285796fb83f2864.js" async></script><script src="/app-7bbdb2232fb99d9fe37a.js" async></script><!-- slice-end id="_gatsby-scripts-1" --></body></html>
